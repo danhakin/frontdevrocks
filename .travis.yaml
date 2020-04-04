@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - "node"
+  - "10"
+
+before_script:
+  - "npm install"
+
+script:
+  - "npm run build"
 
 deploy:
+  skip_cleanup: true
   provider: surge
   project: ./public/
-  domain: frontdevrocks.surge.sh 
+  domain: frontdevrocks.surge.sh
+  on:
+    branch: master
