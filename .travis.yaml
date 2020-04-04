@@ -4,5 +4,5 @@ node_js:
 
 deploy:
   provider: surge
-  project: ./static/
-  domain: example.surge.sh 
+  project: ./public/
+  domain: frontdevrocks.surge.sh 
